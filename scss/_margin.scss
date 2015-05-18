@@ -1,0 +1,119 @@
+.rl-margin-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@for $num from 0 through 20 {
+  .rl-margin-#{8 *$num} {
+    margin-left:#{8 * $num}px !important;
+    margin-right:#{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .tb-margin-#{8 *$num} {
+    margin-top: #{8 * $num}px !important;
+    margin-bottom: #{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .r-margin-#{8 *$num} {
+    margin-right:#{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .l-margin-#{8 *$num} {
+    margin-left:#{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .t-margin-#{8 *$num} {
+    margin-top: #{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .b-margin-#{8 *$num} {
+    margin-bottom: #{8 * $num}px !important;
+  }
+}
+
+
+@media #{$medium-and-down} {
+  @for $num from 0 through 20 {
+    .m-rl-margin-#{8 *$num} {
+      margin-left: #{8 * $num}px !important;
+      margin-right: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .m-tb-margin-#{8 *$num} {
+      margin-top: #{8 * $num}px !important;
+      margin-bottom: #{8 * $num}px !important;
+    }
+  }
+  @for $num from 0 through 20 {
+    .m-r-margin-#{8 *$num} {
+      margin-right:#{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .m-l-margin-#{8 *$num} {
+      margin-left:#{8 * $num}px !important;
+    }
+  }
+  @for $num from 0 through 20 {
+    .m-t-margin-#{8 *$num} {
+      margin-top:#{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .m-b-margin-#{8 *$num} {
+      margin-bottom:#{8 * $num}px !important;
+    }
+  }
+}
+
+@media #{$small-and-down} {
+  @for $num from 0 through 20 {
+    .s-rl-margin-#{8 *$num} {
+      margin-left: #{8 * $num}px !important;
+      margin-right: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .s-tb-margin-#{8 *$num} {
+      margin-top: #{8 * $num}px !important;
+      margin-bottom: #{8 * $num}px !important;
+    }
+  }
+  @for $num from 0 through 20 {
+    .s-r-margin-#{8 *$num} {
+      margin-right:#{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .s-l-margin-#{8 *$num} {
+      margin-left:#{8 * $num}px !important;
+    }
+  }
+  @for $num from 0 through 20 {
+    .s-t-margin-#{8 *$num} {
+      margin-top:#{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .s-b-margin-#{8 *$num} {
+      margin-bottom:#{8 * $num}px !important;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+/****************************
+*   clear-both
+****************************/
+.clear-both {
+  clear: both;
+}
+
+/****************************
+*   image-vertical-bottom
+****************************/
+img {
+  vertical-align: bottom;
+}
+
+/****************************
+*   text-align
+****************************/
+
+@media #{$medium-and-down} {
+  .m-align-center {
+    text-align: center;
+  }
+  .m-align-right {
+    text-align: right;
+  }
+  .m-align-left {
+    text-align: left;
+  }
+}
+
+@media #{$small-and-down} {
+  .s-align-center {
+    text-align: center;
+  }
+  .s-align-right {
+    text-align: right;
+  }
+  .s-align-left {
+    text-align: left;
+  }
+}
+
+/****************************
+*   display-none
+****************************/
+.display-none {
+  display: none;
+}
+
+@media #{$medium-and-down} {
+  .m-display-none {
+    display: none;
+  }
+}
+
+@media #{$small-and-down} {
+  .s-display-none {
+    display: none;
+  }
+}

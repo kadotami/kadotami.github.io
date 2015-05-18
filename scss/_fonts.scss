@@ -1,0 +1,22 @@
+// @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-weight: 200;
+  src: url('fonts/noto/NotoSansCJK-Light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/noto/NotoSansCJK-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/noto/NotoSansCJK-Light.woff') format('woff'), /* Modern Browsers */
+  url('fonts/noto/NotoSansCJK-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+.noto-light {
+  font-family: 'Noto Sans Japanese';
+  font-weight: 200;
+}
+
+.noto-dark,h1,h2,h3,h4,h5,h6 {
+  font-family: 'Noto Sans Japanese';
+  font-weight: 200;
+  color: #2C2C2C;
+}

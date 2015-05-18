@@ -1,0 +1,26 @@
+#main {
+  width: $content_width;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  @media #{$medium-and-down} {
+    width: 100%;
+  }
+  @media #{$medium-and-down} {
+    section {
+      width: 90%;
+      margin: 0 5%;
+    }
+  }
+}
+.row {
+  .col {
+    &.col-flipped {
+      @media #{$medium-only} {
+        float: right;
+      }
+    }
+  }
+}

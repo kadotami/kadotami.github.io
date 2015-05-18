@@ -1,0 +1,115 @@
+@for $num from 0 through 20 {
+  .rl-padding-#{8 *$num} {
+    padding-left: #{8 * $num}px !important;
+    padding-right: #{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .tb-padding-#{8 *$num} {
+    padding-top: #{8 * $num}px !important;
+    padding-bottom: #{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .r-padding-#{8 *$num} {
+    padding-right: #{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .l-padding-#{8 *$num} {
+    padding-left: #{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .t-padding-#{8 *$num} {
+    padding-top: #{8 * $num}px !important;
+  }
+}
+
+@for $num from 0 through 20 {
+  .b-padding-#{8 *$num} {
+    padding-bottom: #{8 * $num}px !important;
+  }
+}
+
+@media #{$medium-and-down} {
+    @for $num from 0 through 20 {
+    .m-rl-padding-#{8 *$num} {
+      padding-left: #{8 * $num}px !important;
+      padding-right: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .m-tb-padding-#{8 *$num} {
+      padding-top: #{8 * $num}px !important;
+      padding-bottom: #{8 * $num}px !important;
+    }
+  }
+  @for $num from 0 through 20 {
+    .m-r-padding-#{8 *$num} {
+      padding-right: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .m-l-padding-#{8 *$num} {
+      padding-left: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .m-t-padding-#{8 *$num} {
+      padding-top: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .m-b-padding-#{8 *$num} {
+      padding-bottom: #{8 * $num}px !important;
+    }
+  }
+}
+
+@media #{$small-and-down} {
+    @for $num from 0 through 20 {
+    .s-rl-padding-#{8 *$num} {
+      padding-left: #{8 * $num}px !important;
+      padding-right: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 10 {
+    .s-tb-padding-#{8 *$num} {
+      padding-top: #{8 * $num}px !important;
+      padding-bottom: #{8 * $num}px !important;
+    }
+  }
+  @for $num from 0 through 20 {
+    .s-r-padding-#{8 *$num} {
+      padding-right: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .s-l-padding-#{8 *$num} {
+      padding-left: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .s-t-padding-#{8 *$num} {
+      padding-top: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .s-b-padding-#{8 *$num} {
+      padding-bottom: #{8 * $num}px !important;
+    }
+  }
+}
