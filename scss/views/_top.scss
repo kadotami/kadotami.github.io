@@ -1,18 +1,24 @@
 #main {
   width: $content_width;
   margin: 0 auto;
-  img {
-    width: 100%;
-    border-radius: 50%;
-  }
-  @media #{$medium-and-down} {
-    width: 100%;
-  }
-  @media #{$medium-and-down} {
-    section {
-      width: 90%;
-      margin: 0 5%;
+  .top-section {
+    img {
+      border-radius: 50%;
+      width: 300px;
     }
+  }
+  section {
+    h1 {
+      font-size: 35px;
+    }
+    h2 {
+      font-size: 26px;
+    }
+  }
+  @media #{$large-and-down} {
+    width: 100%;
+  }
+  @media #{$medium-and-down} {
   }
 }
 .row {
@@ -23,4 +29,96 @@
       }
     }
   }
+}
+
+.profile {
+}
+
+.skill {
+  .devtool-block {
+    width: 100px;
+  }
+  .devicons {
+    width: 64px;
+    margin: 0 auto;
+    font-size: 64px;
+  }
+  .devicons-angular {
+    color: #F70000;
+  }
+  .devicons-html5 {
+    color: #FC4200;
+  }
+  .devicons-css3 {
+    color: #0069BE;
+  }
+  .devicons-ruby_on_rails {
+    color: #FFFFFF;
+    background: radial-gradient(26px at 26px 26px,#EE9BA8, #C4002C);
+  }
+  .devicons-wordpress {
+    color: #0080AA;
+  }
+  .devicons-jquery {
+    color: #0070BA;
+  }
+  .other-skill {
+    @media #{$small-and-down} {
+      .devicons {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+.portfolio {
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.star-area {
+  font-size: 20px;
+  letter-spacing: 0;
+  width: 100px;
+  line-height: 1;
+  .yellow-star {
+    margin-top: -20px;
+    color: #FFFD40;
+    white-space: nowrap;
+    overflow-x: hidden;
+  }
+}
+
+$link_area_height: 48px;
+.link-area {
+  a {
+    color: $main_font_color;
+    display: inline;
+  }
+  img {
+    width: $link_area_height - 12px;
+    height: $link_area_height - 12px;
+    margin-bottom: 6px;
+  }
+  .devicons {
+    font-size: $link_area_height;
+  }
+}
+
+
+$border-margin: 15px;
+.section-border:before,.section-border:after {
+  display: block;
+  content: "";
+  transform: rotate(3deg);
+  border: solid 2px $blue_color;
+  width: 200%;
+  margin: 0 -50%;
+  height: $border-margin;
+}
+.section-border:after {
+  margin: -$border-margin -50% 0;
+  transform: rotate(-3deg);
 }

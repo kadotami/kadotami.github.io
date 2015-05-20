@@ -36,6 +36,45 @@
   }
 }
 
+@media #{$large-and-down} {
+  @for $num from 0 through 20 {
+    .l-rl-padding-#{8 *$num} {
+      padding-left: #{8 * $num}px !important;
+      padding-right: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .l-tb-padding-#{8 *$num} {
+      padding-top: #{8 * $num}px !important;
+      padding-bottom: #{8 * $num}px !important;
+    }
+  }
+  @for $num from 0 through 20 {
+    .l-r-padding-#{8 *$num} {
+      padding-right: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .l-l-padding-#{8 *$num} {
+      padding-left: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .l-t-padding-#{8 *$num} {
+      padding-top: #{8 * $num}px !important;
+    }
+  }
+
+  @for $num from 0 through 20 {
+    .l-b-padding-#{8 *$num} {
+      padding-bottom: #{8 * $num}px !important;
+    }
+  }
+}
+
 @media #{$medium-and-down} {
     @for $num from 0 through 20 {
     .m-rl-padding-#{8 *$num} {

@@ -7,4 +7,6 @@ body {
   overflow: hidden;
   color: $main_font_color;
   -webkit-text-size-adjust: 100%;
+  border-top: solid 5px $blue_color;
+  border-bottom: solid 5px $blue_color;
 }
