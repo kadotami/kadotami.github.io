@@ -4,7 +4,8 @@
   .top-section {
     img {
       border-radius: 50%;
-      width: 300px;
+      width: 100%;
+      max-width: 300px;
     }
   }
   section {
@@ -37,6 +38,28 @@
 .skill {
   .devtool-block {
     width: 100px;
+    @media #{$small-and-down} {
+      width: 80px;
+    }
+  }
+  .star-area {
+    font-size: 20px;
+    letter-spacing: 0;
+    width: 100px;
+    line-height: 1;
+    @media #{$small-and-down} {
+      font-size: 16px;
+      width: 80px;
+    }
+    .yellow-star {
+      margin-top: -20px;
+      color: #FFFD40;
+      white-space: nowrap;
+      overflow-x: hidden;
+      @media #{$small-and-down} {
+        margin-top: -16px;
+      }
+    }
   }
   .devicons {
     width: 64px;
@@ -78,18 +101,6 @@
   }
 }
 
-.star-area {
-  font-size: 20px;
-  letter-spacing: 0;
-  width: 100px;
-  line-height: 1;
-  .yellow-star {
-    margin-top: -20px;
-    color: #FFFD40;
-    white-space: nowrap;
-    overflow-x: hidden;
-  }
-}
 
 $link_area_height: 48px;
 .link-area {
@@ -117,8 +128,14 @@ $border-margin: 15px;
   width: 200%;
   margin: 0 -50%;
   height: $border-margin;
+  @media #{$medium-and-down} {
+    transform: rotate(4deg);
+  }
 }
 .section-border:after {
   margin: -$border-margin -50% 0;
   transform: rotate(-3deg);
+  @media #{$medium-and-down} {
+    transform: rotate(-4deg);
+  }
 }
