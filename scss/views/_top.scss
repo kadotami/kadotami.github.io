@@ -102,8 +102,16 @@
     width: 100%;
     border-radius: 10px;
   }
+  @media #{$medium-only} {
+    .product-block {
+      @include flexbox();
+      @include align(center);
+    }
+    .reverse{
+      flex-direction: row-reverse;
+    }
+  }
 }
-
 
 $link_area_height: 48px;
 .link-area {
