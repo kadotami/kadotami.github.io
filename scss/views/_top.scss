@@ -54,7 +54,7 @@
     .gray-star {
       text-shadow: 0 1px 1px #000;
     }
-    .yellow-star {
+    .active-star {
       margin-top: -20px;
       color: #FFFD40;
       white-space: nowrap;
@@ -89,6 +89,27 @@
     color: #0070BA;
   }
   .other-skill {
+    .devicons-coffeescript {
+      color: #2B3958;
+    }
+    .devicons-react {
+      color: #00E0FF;
+    }
+    .devicons-yeoman {
+      color: #010101;
+    }
+    .devicons-ionic {
+      color: #4891FF;
+    }
+    .devicons-sass {
+      color: #E65EA4;
+    }
+    .devicons-python {
+      color: #000000;
+    }
+    .devicons-bower {
+      color: #643D28;
+    }
     @media #{$small-and-down} {
       .devicons {
         font-size: 48px;
@@ -100,7 +121,6 @@
 .portfolio {
   img {
     width: 100%;
-    border-radius: 10px;
   }
   @media #{$medium-only} {
     .product-block {
