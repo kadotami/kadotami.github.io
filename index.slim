@@ -8,19 +8,28 @@ html
     link href="style.css" rel="stylesheet" /
   body
     article#main.container
-      section.top-section.center-align.b-margin-80
+      section.top-section.center-align.b-margin-120
         h1.tb-margin-24 TitleTitleTitleTitle
         img src="images/listerine.jpg" /
       .section-border
-      section.tb-margin-80.center-align.profile.l-rl-padding-24.m-rl-padding-32.s-rl-padding-16
+      section.tb-margin-120.center-align.profile.l-rl-padding-24.m-rl-padding-32.s-rl-padding-16
         h2.tb-margin-32 プロフィール
         p
           | ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
           | ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
           | ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+        h3.tb-margin-24 コンテスト受賞歴
+        h4 hack U waseda
+        p.b-margin-16  RealSakaiLab「ピクタム」Yahoo賞
+        h4 早稲田大学ビジネスコンテスト 2013
+        p.b-margin-16 wizpra 「Pozica」 最優秀賞
+        h4 第10回 キャンパスベンチャーグランプリ
+        p wizpra 「Pozica」 関東経済産業局長賞
       .section-border
-      section.tb-margin-80.skill.l-rl-padding-24.m-rl-padding-32.s-rl-padding-16
-        h2.center-align.tb-margin-32 使用言語・ツール
+      section.tb-margin-120.skill.l-rl-padding-24.m-rl-padding-32.s-rl-padding-16
+        h2.center-align.t-margin-32 使用言語・ツール
+        h6.center-align.b-margin-32
+          | (あくまで学生の主観評価です。社会人レベルではまた違う評価になると思います。)
         .row
           .col.s12.m12.l6.tb-margin-8
             .row.valign-wrapper
@@ -36,7 +45,7 @@ html
                         i.mdi-action-grade
                   .name HTML
               .col.s9.s-l-padding-16
-                | あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                | 大学に入って本格的に触り始め、とりあえず書ける。HTML5の機能はあまり使う機会がなかったので、まだ未熟。
           .col.s12.m12.l6.tb-margin-8
             .row.valign-wrapper
               .col.s3.center-align
@@ -51,7 +60,7 @@ html
                         i.mdi-action-grade
                   .name CSS
               .col.s9.s-l-padding-16
-                | あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                | 経験はHTMLと同じ程度、イラレやフォトショを使えないので出来る限りCSSで書こうとハック的な事をやるのが好き。左側のアイコンの下の星メーターもCSSとweb fontで出来てたりする。
           .col.s12.m12.l6.tb-margin-8
             .row.valign-wrapper
               .col.s3.center-align
@@ -106,7 +115,7 @@ html
                     .star.gray-star
                       - (1..5).each do |i|
                         i.mdi-action-grade
-                    .star.active-star style="width: 50%;"
+                    .star.active-star style="width: 40%;"
                       - (1..5).each do |i|
                         i.mdi-action-grade
                   .name Rails
@@ -118,7 +127,7 @@ html
             - icons.each do |name|
               span class="devicons devicons-#{name}"
       .section-border
-      section.tb-margin-80.portfolio.l-rl-padding-24.m-rl-padding-32.s-rl-padding-16
+      section.tb-margin-120.portfolio.l-rl-padding-24.m-rl-padding-32.s-rl-padding-16
         h2.center-align.tb-margin-32 制作物
         .row
           .col.s12.m12.l4.r-padding-80.m-r-padding-0.s-r-padding-0
@@ -126,7 +135,7 @@ html
               .col.s12.m6.l12
                 img src="images/listerine.jpg" /
               p.col.s12.m6.l12.tb-margin-24.m-rl-padding-16.s-rl-padding-0
-                | 起業時から携わっている会社(株式会社wizpra)のコーポレートサイト。初めてプロのデザイナーさんとご一緒し、プロトタイプ・デザインツールを用いつつ、色々な事を教わりながら作成した。
+                | 起業時から携わっている会社(株式会社wizpra)のコーポレートサイト。初めてプロのデザイナーさんとご一緒し、プロトタイプ・デザインツールを用い、様々な事を教わりながら作成した。
           .col.s12.m12.l4.rl-padding-40.m-rl-padding-0.s-rl-padding-0
             .row.product-block.reverse
               .col-flipped.col.s12.m6.l12
