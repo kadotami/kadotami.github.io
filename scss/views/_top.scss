@@ -37,7 +37,7 @@
 
 .skill {
   .devtool-block {
-    width: 100px;
+    width: 100px !important;
     @media #{$small-and-down} {
       width: 80px;
     }
@@ -118,7 +118,11 @@
   }
 }
 
-.portfolio {
+.made-item {
+  a {
+    color: $blue_color;
+    text-decoration: underline;
+  }
   img {
     width: 100%;
   }
