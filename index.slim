@@ -42,21 +42,6 @@ html
             .row.valign-wrapper
               .col.s3.center-align
                 .devtool-block.rl-margin-auto
-                  .devicons.devicons-html5
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 70%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name HTML
-              .col.s9.s-l-padding-16
-                | 大学に入って本格的に触り始め、とりあえず書ける。HTML5の機能はあまり使う機会がなかったので、まだ未熟。
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
                   .devicons.devicons-css3
                   .star-area.rl-margin-auto
                     .star.gray-star
@@ -72,17 +57,47 @@ html
             .row.valign-wrapper
               .col.s3.center-align
                 .devtool-block.rl-margin-auto
+                  .devicons.devicons-html5
+                  .star-area.rl-margin-auto
+                    .star.gray-star
+                      - (1..5).each do |i|
+                        i.mdi-action-grade
+                    .star.active-star style="width: 70%;"
+                      - (1..5).each do |i|
+                        i.mdi-action-grade
+                  .name HTML
+              .col.s9.s-l-padding-16
+                | 大学に入って本格的に触り始め、とりあえず書ける。HTML5の機能はあまり使う機会がなかったので、まだ未熟。
+          .col.s12.m12.l6.tb-margin-8
+            .row.valign-wrapper
+              .col.s3.center-align
+                .devtool-block.rl-margin-auto
                   .devicons.devicons-angular
                   .star-area.rl-margin-auto
                     .star.gray-star
                       - (1..5).each do |i|
                         i.mdi-action-grade
-                    .star.active-star style="width: 50%;"
+                    .star.active-star style="width: 60%;"
                       - (1..5).each do |i|
                         i.mdi-action-grade
                   .name AngularJS
               .col.s9.s-l-padding-16
                 | Jqueryから乗り換え、バイト先のメインサービスの開発をやりつつ勉強した。一応動くものは作れるが、ディレクティブの設計などは甘め。
+          .col.s12.m12.l6.tb-margin-8
+            .row.valign-wrapper
+              .col.s3.center-align
+                .devtool-block.rl-margin-auto
+                  .devicons.devicons-jquery
+                  .star-area.rl-margin-auto
+                    .star.gray-star
+                      - (1..5).each do |i|
+                        i.mdi-action-grade
+                    .star.active-star style="width: 60%;"
+                      - (1..5).each do |i|
+                        i.mdi-action-grade
+                  .name Jquery
+              .col.s9.s-l-padding-16
+                | HP制作を始めた際に独学で勉強し、バイト先のツールのV1で使用。最近はプラグインを利用する程度でコードは書いていない。
           .col.s12.m12.l6.tb-margin-8
             .row.valign-wrapper
               .col.s3.center-align
@@ -97,22 +112,7 @@ html
                         i.mdi-action-grade
                   .name WordPress
               .col.s9.s-l-padding-16
-                | webサイトを構築した際に何度かお世話になった。カスタマイズ的なことは結構調べて実装してきたが、プラグインやSEO対策などは実践不足。
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
-                  .devicons.devicons-jquery
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 50%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name Jquery
-              .col.s9.s-l-padding-16
-                | HP制作を始めた際に独学で勉強し、バイト先のツールのV1で使用。最近はプラグインを利用する程度でコードは書いていない。
+                | フリーでwebサイトを構築した際に何度かお世話になった。カスタマイズ的なことは結構調べて実装してきたが、プラグインやSEO対策などは実践不足。
           .col.s12.m12.l6.tb-margin-8
             .row.valign-wrapper
               .col.s3.center-align
@@ -122,12 +122,12 @@ html
                     .star.gray-star
                       - (1..5).each do |i|
                         i.mdi-action-grade
-                    .star.active-star style="width: 40%;"
+                    .star.active-star style="width: 50%;"
                       - (1..5).each do |i|
                         i.mdi-action-grade
                   .name Rails
               .col.s9.s-l-padding-16
-                | 研究室内ツールなどを開発する際に使用。バックエンドの高速化やSQLに関して知識が不足しているので今は動くものが作れる程度。主にプロトタイピングのJSONAPIに使用している。
+                | 研究室内ツールなどを開発する際に使用。バックエンドの高速化やSQLに関して知識が不足しているので今は動くものが作れる程度。主にプロトタイピング用のJSONAPIを作るのに使用している。
           .col.s12.m12.l12.tb-margin-8.center-align.other-skill
             h3 その他
             - icons = ["bower","python","sass","ionic","yeoman","react","coffeescript"]
@@ -157,7 +157,7 @@ html
               .col.s12.m6.l12
                 img src="images/listerine.jpg" /
               p.col.s12.m6.l12.tb-margin-24.m-rl-padding-16.s-rl-padding-0
-                | 公開できるものは少ない。これら以外にも研究室内のウェブツールを作ったり、CSSで遊んでいたりする。その他コードは
+                | これら以外にも研究室内のウェブツールを作ったり、CSSで遊んでいたりする。その他コードは
                 a href="https://github.com/kadotami"
                   | github
                 | に。今まで会社のプライベートへのコミットばかりなのでコントリビュートは少ない…
