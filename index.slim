@@ -19,7 +19,7 @@ html
         p
           | サークルのHP改修を任されwebの世界へ。
         p
-          | 株式会社wizpraに創業メンバーとしてjoin、ファーストプロダクト「Pozica」のフロントエンドを担当。
+          | 株式会社wizpraに創業メンバーとしてjoin、ファーストプロダクト「Pozica」のフロントエンドを担当。セカンドプロダクト「wizpra NPS」においてもフロントエンドを中心に関わり、データ分析などに触れる。
         p
           | Yahoo! JapanをはじめとするWeb企業数社でインターンを経験
         p
@@ -131,10 +131,40 @@ html
                         i.mdi-action-grade
                   .name Rails
               .col.s9.s-l-padding-16
-                | 研究室内ツールなどを開発する際に使用。バックエンドの高速化やSQLに関して知識が不足しているので今は動くものが作れる程度。主にプロトタイピング用のJSONAPIを作るのに使用している。
+                | wizpraのプロダクトで使用した後、研究室内ツールなどを開発する際に使用。バックエンドの高速化やSQLに関して知識が不足しているので今は動くものが作れる程度。主にプロトタイピング用のJSONAPIを作るのに使用している。
+          .col.s12.m12.l6.tb-margin-8
+            .row.valign-wrapper
+              .col.s3.center-align
+                .devtool-block.rl-margin-auto
+                  .devicons.devicons-python
+                  .star-area.rl-margin-auto
+                    .star.gray-star
+                      - (1..5).each do |i|
+                        i.mdi-action-grade
+                    .star.active-star style="width: 60%;"
+                      - (1..5).each do |i|
+                        i.mdi-action-grade
+                  .name python
+              .col.s9.s-l-padding-16
+                | 主に研究で使用．自然言語処理や機械学習のライブラリを使用して提案手法やベースライン手法を実装している。研究以外にもwebAPIとしてdjangoでの開発も行っている。
+          .col.s12.m12.l6.tb-margin-8
+            .row.valign-wrapper
+              .col.s3.center-align
+                .devtool-block.rl-margin-auto
+                  .devicons.devicons-php
+                  .star-area.rl-margin-auto
+                    .star.gray-star
+                      - (1..5).each do |i|
+                        i.mdi-action-grade
+                    .star.active-star style="width: 20%;"
+                      - (1..5).each do |i|
+                        i.mdi-action-grade
+                  .name php
+              .col.s9.s-l-padding-16
+                | 内定先のプロダクト開発で使用。実は内定先でバイトを始めるまで触れたことはなかった。勉強中…
           .col.s12.m12.l12.tb-margin-8.center-align.other-skill
             h3 その他
-            - icons = ["bower","python","sass","ionic","yeoman","react","coffeescript"]
+            - icons = ["bower","atlassian","sass","ionic","yeoman","react","coffeescript"]
             - icons.each do |name|
               span class="devicons devicons-#{name}"
       .section-border
