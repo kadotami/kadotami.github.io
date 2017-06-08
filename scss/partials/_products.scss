@@ -1,0 +1,19 @@
+.products {
+    h2 {
+        font-size: $titel_font_size;
+        text-align: center;
+    }
+    &__item {
+        text-align: center;
+        h3 {
+            margin: 16px 0;
+            font-size: 18px;
+        }
+    }
+    &__image {
+        img {
+            width: 60%;
+            margin: 0 20%;
+        }
+    }
+}

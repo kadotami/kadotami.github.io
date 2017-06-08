@@ -1,0 +1,105 @@
+.skill {
+    h2 {
+      font-size: $titel_font_size;
+      text-align: center;
+    }
+
+    &__item {
+        width: 100px;
+        margin: 0 0 24px;
+        @media #{$small-and-down} {
+            width: 80px;
+        }
+    }
+
+    &__stararea {
+        width: $star_font_size * 5;
+        margin: 24px auto 0;
+    }
+
+    &__star {
+        margin-top: -30px;
+        color: #FFFD40;
+        white-space: nowrap;
+        overflow-x: hidden;
+        i {
+            font-size: $star_font_size;
+        }
+    }
+
+    &__star--gray {
+        @extend .skill__star;
+        text-shadow: 0 1px 1px #000;
+        color: #6A6A6A;
+    }
+
+    &__name {
+        text-align: center;
+    }
+
+    &__icon {
+        width: 96px;
+        margin: 0 auto;
+        font-size: 96px;
+    }
+
+    &__otherItem {
+        text-align: center;
+    }
+
+    &__otherIcon {
+        font-size: 36px;
+    }
+}
+
+.devicons-angular {
+  color: #F70000;
+}
+.devicons-html5 {
+  color: #FC4200;
+}
+.devicons-css3 {
+  color: #0069BE;
+}
+.devicons-ruby_on_rails {
+  color: #FFFFFF;
+  background: radial-gradient(26px at 26px 26px,#EE9BA8, #C4002C);
+}
+.devicons-wordpress {
+  color: #0080AA;
+}
+.devicons-jquery {
+  color: #0070BA;
+}
+.devicons-atlassian {
+  color: #0070BA;
+}
+.skill__otherItem {
+  .devicons-coffeescript {
+    color: #2B3958;
+  }
+  .devicons-react {
+    color: #00E0FF;
+  }
+  .devicons-yeoman {
+    color: #010101;
+  }
+  .devicons-ionic {
+    color: #4891FF;
+  }
+  .devicons-go {
+    color: #888;
+  }
+  .devicons-python {
+    color: #000000;
+  }
+  .devicons-bower {
+    color: #643D28;
+  }
+  @media #{$small-and-down} {
+    .devicons {
+      font-size: 48px;
+    }
+  }
+}
+

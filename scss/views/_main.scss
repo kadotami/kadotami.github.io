@@ -1,0 +1,9 @@
+#main {
+  width: $content_width;
+  margin: 0 auto;
+  @media #{$large-and-down} {
+    width: 100%;
+  }
+  @media #{$medium-and-down} {
+  }
+}

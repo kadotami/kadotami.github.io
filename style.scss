@@ -1,12 +1,13 @@
-@import "scss/materialize";
-@import "scss/reset";
-@import "scss/template_class";
-@import "scss/settings";
-@import "scss/fonts";
+@import "scss/vendor/materialize";
+@import "scss/partials/reset";
+@import "scss/partials/settings";
+@import "scss/partials/fonts";
+@import "scss/partials/base";
 
-@import "scss/margin";
-@import "scss/padding";
+@import "scss/partials/block_separator";
+@import "scss/partials/profile";
+@import "scss/partials/skill";
+@import "scss/partials/products";
+@import "scss/partials/top";
 
-@import "scss/layouts/base";
-
-@import "scss/views/top";
+@import "scss/views/main";

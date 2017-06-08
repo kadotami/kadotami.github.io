@@ -8,217 +8,185 @@ html
     link href="style.css" rel="stylesheet" /
   body
     article#main.container
-      section.top-section.center-align.b-margin-120
+      section.top
         h1.tb-margin-24 Kadotami.github.io
-        img src="images/listerine.jpg" /
-      .section-border
-      section.tb-margin-120.center-align.profile.l-rl-padding-24.m-rl-padding-32.s-rl-padding-16
-        h2.tb-margin-32 プロフィール
-        p
-          | 都内某大学院情報系学生。
-        p
-          | サークルのHP改修を任されwebの世界へ。
-        p
-          | 株式会社wizpraに創業メンバーとしてjoin、ファーストプロダクト「Pozica」のフロントエンドを担当。
-        p
-          | セカンドプロダクト「wizpra NPS」においてもフロントエンドを中心に関わり、データ分析などに触れる。
-        p
-          | Yahoo! JapanをはじめとするWeb企業数社でインターンを経験
-        p
-          | 知人の紹介を経てcocotrekにエンジニアとしてjoin、フロントエンドを中心に自動化なども担当。
-        p
-          | 大学では情報検索・自然言語処理の研究室に所属。
-        h3.tb-margin-8 研究テーマ
-        p 学部: テキスト分割
-        p 院: 検索ログの分析とコンテキストによる検索結果の最適化
-        h3.tb-margin-24 コンテスト受賞歴
-        h4 hack U waseda
-        p.b-margin-16  RealSakaiLab「ピクタム」Yahoo賞
-        h4 早稲田大学ビジネスコンテスト 2013
-        p.b-margin-16 wizpra 「Pozica」 最優秀賞
-        h4 第10回 キャンパスベンチャーグランプリ
-        p wizpra 「Pozica」 関東経済産業局長賞
-      .section-border
-      section.tb-margin-120.skill.l-rl-padding-24.m-rl-padding-32.s-rl-padding-16
-        h2.center-align.t-margin-32 使用言語・ツール
-        h6.center-align.t-margin-16
-          | (★は経験年数)
+
+      .block__separator
+
+      section.profile
+        h2 Profile
+        .profile__item
+          h3 経歴
+          h4 株式会社wizpra(現EmotionTech) 2013~2015
+          p
+            | 創業メンバーとしてjoin、ファーストプロダクト「Pozica」のフロントエンドを担当。
+          p
+            | セカンドプロダクト「wizpra NPS」においてもフロントエンドを中心に関わり、データ分析などに触れる。
+
+          h4 cocotrek 2015~2016
+          p
+             | 知人の紹介を経て創業メンバー兼エンジニアとしてjoin、フロントエンドを中心に自動化なども担当。
+
+          h4 GMO internet 次世代システム研究室 2017~
+          p
+            |
+
+        .profile__item
+          h3 大学研究テーマ
+          p 学部: テキスト分割
+          p 院: 検索ログの分析とコンテキストによる検索結果の最適化
+
+        .profile__item
+          h3 インターン経験
+          p.profile__item--list 
+            | - リクルート
+          p.profile__item--list 
+            | - Yahoo! Japan
+          p.profile__item--list 
+            | - NAVITIME
+          p.profile__item--list 
+            | - GMO internet joint lab
+        
+        .profile__item
+          h3 コンテスト受賞歴
+          h4 hack U waseda
+          p  RealSakaiLab「ピクタム」Yahoo賞
+          h4 早稲田大学ビジネスコンテスト 2013
+          p wizpra 「Pozica」 最優秀賞
+          h4 第10回 キャンパスベンチャーグランプリ
+          p wizpra 「Pozica」 関東経済産業局長賞
+
+      .block__separator
+
+      section.skill
+        h2 Skils
         .row
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
-                  .devicons.devicons-css3
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 80%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name CSS
-              .col.s9.s-l-padding-16
-                | 経験はHTMLと同じ程度、イラレやフォトショを使えないので出来る限りCSSで書こうとハック的な事をやるのが好き。左側のアイコンの下の星メーターもCSSとweb fontで出来てたりする。
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
-                  .devicons.devicons-html5
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 80%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name HTML
-              .col.s9.s-l-padding-16
-                | 大学に入って本格的に触り始め、とりあえず書ける。HTML5の機能はあまり使う機会がなかったので、まだ未熟。
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
-                  .devicons.devicons-angular
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 60%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name AngularJS
-              .col.s9.s-l-padding-16
-                | Jqueryから乗り換え、バイト先のメインサービスの開発をやりつつ勉強した。一応動くものは作れるが、ディレクティブの設計などは甘め。
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
-                  .devicons.devicons-jquery
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 60%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name Jquery
-              .col.s9.s-l-padding-16
-                | HP制作を始めた際に独学で勉強し、バイト先のツールのV1で使用。最近はプラグインを利用する程度でコードは書いていない。
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
-                  .devicons.devicons-wordpress
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 50%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name WordPress
-              .col.s9.s-l-padding-16
-                | フリーでwebサイトを構築した際に何度かお世話になった。カスタマイズ的なことは結構調べて実装してきたが、プラグインやSEO対策などは実践不足。
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
-                  .devicons.devicons-ruby_on_rails
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 50%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name Rails
-              .col.s9.s-l-padding-16
-                | wizpraのプロダクトで使用した後、研究室内ツールなどを開発する際に使用。バックエンドの高速化やSQLに関して知識が不足しているので今は動くものが作れる程度。主にプロトタイピング用のJSONAPIを作るのに使用している。
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
-                  .devicons.devicons-python
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 60%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name python
-              .col.s9.s-l-padding-16
-                | 主に研究で使用．自然言語処理や機械学習のライブラリを使用して提案手法やベースライン手法を実装している。研究以外にもwebAPIとしてdjangoでの開発も行っている。
-          .col.s12.m12.l6.tb-margin-8
-            .row.valign-wrapper
-              .col.s3.center-align
-                .devtool-block.rl-margin-auto
-                  .devicons.devicons-php
-                  .star-area.rl-margin-auto
-                    .star.gray-star
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                    .star.active-star style="width: 20%;"
-                      - (1..5).each do |i|
-                        i.mdi-action-grade
-                  .name php
-              .col.s9.s-l-padding-16
-                | 内定先のプロダクト開発で使用。実は内定先でバイトを始めるまで触れたことはなかった。勉強中…
-          .col.s12.m12.l12.tb-margin-8.center-align.other-skill
+          .skill__item.col.l3.m3.s6
+            .skill__icon.devicons.devicons-css3
+            .skill__stararea
+              .skill__star--gray
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+              .skill__star style="width: 90%;"
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+            .skill__name CSS
+          
+          .skill__item.col.l3.m3.s6
+            .skill__icon.devicons.devicons-html5
+            .skill__stararea
+              .skill__star--gray
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+              .skill__star style="width: 90%;"
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+            .skill__name HTML5
+
+
+          .skill__item.col.l3.m3.s6
+            .skill__icon.devicons.devicons-php
+            .skill__stararea
+              .skill__star--gray
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+              .skill__star style="width: 90%;"
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+            .skill__name PHP
+
+          .skill__item.col.l3.m3.s6
+            .skill__icon.devicons.devicons-python
+            .skill__stararea
+              .skill__star--gray
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+              .skill__star style="width: 90%;"
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+            .skill__name Python
+
+          .skill__item.col.l3.m3.s6
+            .skill__icon.devicons.devicons-angular
+            .skill__stararea
+              .skill__star--gray
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+              .skill__star style="width: 90%;"
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+            .skill__name AngularJS
+            
+          .skill__item.col.l3.m3.s6
+            .skill__icon.devicons.devicons-wordpress
+            .skill__stararea
+              .skill__star--gray
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+              .skill__star style="width: 90%;"
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+            .skill__name Wordpress
+          
+          .skill__item.col.l3.m3.s6
+            .skill__icon.devicons.devicons-jquery
+            .skill__stararea
+              .skill__star--gray
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+              .skill__star style="width: 90%;"
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+            .skill__name Jquery
+
+          .skill__item.col.l3.m3.s6
+            .skill__icon.devicons.devicons-ruby_on_rails
+            .skill__stararea
+              .skill__star--gray
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+              .skill__star style="width: 90%;"
+                - (1..5).each do |i|
+                  i.mdi-action-grade
+            .skill__name Rails
+
+          .skill__otherItem
             h3 その他
             - icons = ["bower","atlassian","go","ionic","yeoman","react","coffeescript"]
             - icons.each do |name|
-              span class="devicons devicons-#{name}"
-      .section-border
-      section.made-item.tb-margin-120.l-rl-padding-24.m-rl-padding-32.s-rl-padding-16
-        h2.center-align.tb-margin-32 制作物
+              span class="skill__otherIcon devicons devicons-#{name}"
+
+      .block__separator  
+
+      .products    
+        h2 Products
         .row
-          .col.s12.m12.l4.r-padding-80.m-r-padding-0.s-r-padding-0
-            .row.product-block.m-b-margin-0
-              .col.s12.m6.l12
-                img src="images/made1.png" /
-              p.col.s12.m6.l12.tb-margin-24.m-rl-padding-16.s-rl-padding-0
-                | 起業時から携わっていた
-                a href="https://www.wizpra.com" target="_blank"
-                  |会社(株式会社wizpra)のコーポレートサイト
-                | 。初めてプロのデザイナーさんとご一緒し、プロトタイプ・デザインツールを用い、様々な事を教わりながら作成した。
-          .col.s12.m12.l4.rl-padding-40.m-rl-padding-0.s-rl-padding-0
-            .row.product-block.reverse.m-b-margin-0
-              .col-flipped.col.s12.m6.l12
-                img src="images/made2.png" /
-              p.col.s12.m6.l12.tb-margin-24.m-rl-padding-16.s-rl-padding-0
-                | 株式会社wizpraのメインサービス、「wizpra CARD」と「wizpra NPS」。デザイナーがいない中、何回もデザインの議論、作り直しを行ってUI改善に務めてきたwebアプリ。
-          .col.s12.m12.l4.l-padding-80.m-l-padding-0.s-l-padding-0
-            .row.product-block.m-b-margin-0
-              .col.s12.m6.l12
-                img src="images/made3.png" /
-              p.col.s12.m6.l12.tb-margin-24.m-rl-padding-16.s-rl-padding-0
-                | イギリスに拠点を置くITプロダクト制作会社
-                a href="http://www.ganapatiplc.com/" target="_blank"
-                  | Ganapati
-                | のホームページ。アニメーションやデバイス対応、言語対応に苦労した。顧客からの要求に応えるために試行錯誤したが、レンダリングに難があるページが存在し、悔しい思いもある。
-          .col.s12.m12.l4.r-padding-80.m-r-padding-0.s-r-padding-0
-            .row.product-block.reverse.m-b-margin-0
-              .col.s12.m6.l12
-                img src="images/made4.png" /
-              p.col.s12.m6.l12.tb-margin-24.m-rl-padding-16.s-rl-padding-0
-                | 海外のビジネススクールで学んだ
-                a href="http://cocotrek.com/" target="_blank"
-                  | cocotrek
-                | の創業者に誘われて作成している人生の知見を広げるサービス
-                a href="http://www.dreamgaleri.com/" target="_blank"
-                  | Galeri
-                | 。
-          .col.s12.m12.l4.rl-padding-40.m-rl-padding-0.s-rl-padding-0
-            .row.product-block.m-b-margin-0
-              .col.s12.m6.l12
-                img src="images/listerine.jpg" /
-              p.col.s12.m6.l12.tb-margin-24.m-rl-padding-16.s-rl-padding-0
-                | これら以外にも研究室内のウェブツールを作ったり、CSSで遊んでいたりする。その他コードは
-                a href="https://github.com/kadotami" target="_blank"
-                  | github
-                | に。今まで会社のプライベートへのコミットばかりなのでコントリビュートは少ない…
-      .section-border.tb-margin-80
+          .product__item.col.s12.m6.l6
+            h3 wizpra コーポレートサイト
+            .product__image
+              img src="images/made1.png" /
+          .product__item.col.s12.m6.l6
+            h3 オンラインサンクスカード wizpra CARD
+            .product__image
+              img src="images/made2.png" /
+        .row
+          .product__item.col.s12.m6.l6
+            h3 Ganapati コーポレートサイト
+            .product__image
+              img src="images/made3.png" /
+          .product__item.col.s12.m6.l6
+            h3 人生のメンターマッチングサービス　Galeri
+            .product__image
+              img src="images/made4.png" /
+        
+        .product__sentence
+          | これら以外にも研究室内のウェブツールを作ったり、CSSで遊んでいたりする。その他コードは
+          a href="https://github.com/kadotami" target="_blank"
+            | github
+          | に。今まで会社のプライベートへのコミットばかりなのでコントリビュートは少ない…
+      
+      .block__separator
+
       .link-area.center-align.tb-margin-24
         a href="https://www.facebook.com/profile.php?id=100005406607808" target="_blank"
           img src="images/FB-f-Logo__blue_50.png" /

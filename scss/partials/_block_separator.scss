@@ -1,0 +1,30 @@
+$separate-height: 15px;
+$separate-margin: 120px;
+
+@mixin separator_common {
+  display: block;
+  content: "";
+  transform: rotate(3deg);
+  border: solid 2px $blue_color;
+  width: 200%;
+  margin: 0 -50%;
+  height: $separate-height;
+  @media #{$medium-and-down} {
+    transform: rotate(4deg);
+  }
+}
+
+.block__separator {
+  margin: $separate-margin 0;
+  &:before {
+    @include separator_common();
+  }
+  &:after {
+    @include separator_common();
+    margin: -$separate-height -50% 0;
+    transform: rotate(-3deg);
+    @media #{$medium-and-down} {
+      transform: rotate(-4deg);
+    }
+  }
+}
