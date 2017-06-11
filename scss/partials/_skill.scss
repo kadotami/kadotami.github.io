@@ -1,8 +1,4 @@
 .skill {
-    h2 {
-      font-size: $titel_font_size;
-      text-align: center;
-    }
 
     &__item {
         width: 100px;
@@ -22,8 +18,12 @@
         color: #FFFD40;
         white-space: nowrap;
         overflow-x: hidden;
+        letter-spacing: 0;
         i {
             font-size: $star_font_size;
+            &:before{
+              text-align: center;
+            }
         }
     }
 
@@ -68,38 +68,33 @@
 .devicons-wordpress {
   color: #0080AA;
 }
-.devicons-jquery {
-  color: #0070BA;
-}
 .devicons-atlassian {
   color: #0070BA;
 }
-.skill__otherItem {
-  .devicons-coffeescript {
-    color: #2B3958;
-  }
-  .devicons-react {
-    color: #00E0FF;
-  }
-  .devicons-yeoman {
-    color: #010101;
-  }
-  .devicons-ionic {
-    color: #4891FF;
-  }
-  .devicons-go {
-    color: #888;
-  }
-  .devicons-python {
-    color: #000000;
-  }
-  .devicons-bower {
-    color: #643D28;
-  }
-  @media #{$small-and-down} {
-    .devicons {
-      font-size: 48px;
-    }
+.devicons-coffeescript {
+  color: #2B3958;
+}
+.devicons-react {
+  color: #00E0FF;
+}
+.devicons-yeoman {
+  color: #010101;
+}
+.devicons-ionic {
+  color: #4891FF;
+}
+.devicons-go {
+  color: #888;
+}
+.devicons-python {
+  color: #000000;
+}
+.devicons-bower {
+  color: #643D28;
+}
+@media #{$small-and-down} {
+  .devicons {
+    font-size: 48px;
   }
 }
 

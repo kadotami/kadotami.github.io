@@ -6,4 +6,12 @@
   }
   @media #{$medium-and-down} {
   }
+
+  .block {
+    h2 {
+      font-size: $titel_font_size;
+      margin: $title_margin;
+      text-align: center;
+    }
+  }
 }

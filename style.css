@@ -8711,17 +8711,11 @@ h1, h2, h3, h4, h5, h6 {
       .block__separator:after {
         transform: rotate(-4deg); } }
 
-.profile h2 {
-  font-size: 36px;
-  text-align: center; }
 .profile__item {
   margin: 48px 0; }
   .profile__item h3 {
-    font-size: 28px; }
+    font-size: 24px; }
 
-.skill h2 {
-  font-size: 36px;
-  text-align: center; }
 .skill__item {
   width: 100px;
   margin: 0 0 24px; }
@@ -8735,9 +8729,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -30px;
   color: #FFFD40;
   white-space: nowrap;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  letter-spacing: 0; }
   .skill__star i, .skill__star--gray i {
     font-size: 20px; }
+    .skill__star i:before, .skill__star--gray i:before {
+      text-align: center; }
 .skill__star--gray {
   text-shadow: 0 1px 1px #000;
   color: #6A6A6A; }
@@ -8768,45 +8765,57 @@ h1, h2, h3, h4, h5, h6 {
 .devicons-wordpress {
   color: #0080AA; }
 
-.devicons-jquery {
-  color: #0070BA; }
-
 .devicons-atlassian {
   color: #0070BA; }
 
-.skill__otherItem .devicons-coffeescript {
+.devicons-coffeescript {
   color: #2B3958; }
-.skill__otherItem .devicons-react {
-  color: #00E0FF; }
-.skill__otherItem .devicons-yeoman {
-  color: #010101; }
-.skill__otherItem .devicons-ionic {
-  color: #4891FF; }
-.skill__otherItem .devicons-go {
-  color: #888; }
-.skill__otherItem .devicons-python {
-  color: #000000; }
-.skill__otherItem .devicons-bower {
-  color: #643D28; }
-@media only screen and (max-width: 600px) {
-  .skill__otherItem .devicons {
-    font-size: 48px; } }
 
-.products h2 {
+.devicons-react {
+  color: #00E0FF; }
+
+.devicons-yeoman {
+  color: #010101; }
+
+.devicons-ionic {
+  color: #4891FF; }
+
+.devicons-go {
+  color: #888; }
+
+.devicons-python {
+  color: #000000; }
+
+.devicons-bower {
+  color: #643D28; }
+
+@media only screen and (max-width: 600px) {
+  .devicons {
+    font-size: 48px; } }
+.product h2 {
   font-size: 36px;
+  margin: 24px 0;
   text-align: center; }
-.products__item {
+.product__item {
   text-align: center; }
-  .products__item h3 {
+  .product__item h3 {
     margin: 16px 0;
     font-size: 18px; }
-.products__image img {
+.product__image img {
   width: 60%;
   margin: 0 20%; }
 
-.top h1 {
+.header h1 {
   text-align: center;
   font-size: 48px; }
+
+.footer {
+  text-align: center;
+  margin-bottom: 16px; }
+  .footer a img {
+    width: 48px; }
+  .footer a i {
+    font-size: 48px; }
 
 #main {
   width: 1120px;
@@ -8814,5 +8823,9 @@ h1, h2, h3, h4, h5, h6 {
   @media only screen and (max-width: 1120px) {
     #main {
       width: 100%; } }
+  #main .block h2 {
+    font-size: 36px;
+    margin: 24px 0;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

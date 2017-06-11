@@ -1,6 +1,7 @@
-.products {
+.product {
     h2 {
         font-size: $titel_font_size;
+        margin: $title_margin;
         text-align: center;
     }
     &__item {

@@ -8,12 +8,12 @@ html
     link href="style.css" rel="stylesheet" /
   body
     article#main.container
-      section.top
+      section.header
         h1.tb-margin-24 Kadotami.github.io
 
       .block__separator
 
-      section.profile
+      section.profile.block
         h2 Profile
         .profile__item
           h3 経歴
@@ -58,107 +58,31 @@ html
 
       .block__separator
 
-      section.skill
+      section.skill.block
         h2 Skils
         .row
-          .skill__item.col.l3.m3.s6
-            .skill__icon.devicons.devicons-css3
-            .skill__stararea
-              .skill__star--gray
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-              .skill__star style="width: 90%;"
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-            .skill__name CSS
-          
-          .skill__item.col.l3.m3.s6
-            .skill__icon.devicons.devicons-html5
-            .skill__stararea
-              .skill__star--gray
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-              .skill__star style="width: 90%;"
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-            .skill__name HTML5
+          - icons = [["css3",90,"CSS"],["html5",90,"HTML5"],["php",50,"PHP"],["python",70,"Python"],["angular", 70, "AngularJS 1.*"],["wordpress",50,"Wordpress"],["yii",60,"Yii2"],["ruby_on_rails",70,"Rails"]]
+          - icons.each do |icon, grade, display|
+            .skill__item.col.l3.m3.s6
+              .skill__icon.devicons class="devicons-#{icon}"
+              .skill__stararea
+                .skill__star--gray
+                  - (1..5).each do |i|
+                    i.mdi-action-grade
+                .skill__star style="width: #{grade}%;"
+                  - (1..5).each do |i|
+                    i.mdi-action-grade
+              .skill__name #{display}
 
-
-          .skill__item.col.l3.m3.s6
-            .skill__icon.devicons.devicons-php
-            .skill__stararea
-              .skill__star--gray
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-              .skill__star style="width: 90%;"
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-            .skill__name PHP
-
-          .skill__item.col.l3.m3.s6
-            .skill__icon.devicons.devicons-python
-            .skill__stararea
-              .skill__star--gray
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-              .skill__star style="width: 90%;"
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-            .skill__name Python
-
-          .skill__item.col.l3.m3.s6
-            .skill__icon.devicons.devicons-angular
-            .skill__stararea
-              .skill__star--gray
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-              .skill__star style="width: 90%;"
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-            .skill__name AngularJS
-            
-          .skill__item.col.l3.m3.s6
-            .skill__icon.devicons.devicons-wordpress
-            .skill__stararea
-              .skill__star--gray
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-              .skill__star style="width: 90%;"
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-            .skill__name Wordpress
-          
-          .skill__item.col.l3.m3.s6
-            .skill__icon.devicons.devicons-jquery
-            .skill__stararea
-              .skill__star--gray
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-              .skill__star style="width: 90%;"
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-            .skill__name Jquery
-
-          .skill__item.col.l3.m3.s6
-            .skill__icon.devicons.devicons-ruby_on_rails
-            .skill__stararea
-              .skill__star--gray
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-              .skill__star style="width: 90%;"
-                - (1..5).each do |i|
-                  i.mdi-action-grade
-            .skill__name Rails
-
-          .skill__otherItem
-            h3 その他
-            - icons = ["bower","atlassian","go","ionic","yeoman","react","coffeescript"]
-            - icons.each do |name|
-              span class="skill__otherIcon devicons devicons-#{name}"
+        .skill__otherItem
+          h3 その他
+          - icons = ["bower","atlassian","go","ionic","yeoman","react","coffeescript"]
+          - icons.each do |name|
+            span class="skill__otherIcon devicons devicons-#{name}"
 
       .block__separator  
 
-      .products    
+      section.product.block
         h2 Products
         .row
           .product__item.col.s12.m6.l6
@@ -178,16 +102,10 @@ html
             h3 人生のメンターマッチングサービス　Galeri
             .product__image
               img src="images/made4.png" /
-        
-        .product__sentence
-          | これら以外にも研究室内のウェブツールを作ったり、CSSで遊んでいたりする。その他コードは
-          a href="https://github.com/kadotami" target="_blank"
-            | github
-          | に。今まで会社のプライベートへのコミットばかりなのでコントリビュートは少ない…
       
       .block__separator
 
-      .link-area.center-align.tb-margin-24
+      section.footer
         a href="https://www.facebook.com/profile.php?id=100005406607808" target="_blank"
           img src="images/FB-f-Logo__blue_50.png" /
         a href="https://github.com/kadotami" target="_blank"
