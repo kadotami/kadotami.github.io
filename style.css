@@ -8715,6 +8715,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 48px 0; }
   .profile__item h3 {
     font-size: 24px; }
+  .profile__item h4 {
+    font-size: 20px; }
+.profile__detail {
+  margin-bottom: 16px; }
 
 .skill__item {
   width: 100px;
@@ -8797,10 +8801,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 24px 0;
   text-align: center; }
 .product__item {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 24px; }
   .product__item h3 {
     margin: 16px 0;
-    font-size: 18px; }
+    font-size: 20px; }
 .product__image img {
   width: 60%;
   margin: 0 20%; }
@@ -8823,6 +8828,8 @@ h1, h2, h3, h4, h5, h6 {
   @media only screen and (max-width: 1120px) {
     #main {
       width: 100%; } }
+  #main .block h1, #main .block h2, #main .block h3, #main .block h4, #main .block h5, #main .block h6 {
+    font-weight: bold; }
   #main .block h2 {
     font-size: 36px;
     margin: 24px 0;
