@@ -1,0 +1,97 @@
+<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<script>
+    var arToolkitSource = new THREEx.ArToolkitSource({
+       sourceType: 'webcam',
+       
+       sourceWidth: 100,
+       sourceHeight: 100,
+       
+       displayWidth:200,
+       displayHeight:200
+ });
+
+function webglAvailable() {
+    try {
+        var canvas = document.createElement( 'canvas' );
+        return !!( window.WebGLRenderingContext && (
+            canvas.getContext( 'webgl' ) ||
+            canvas.getContext( 'experimental-webgl' ) )
+        );
+    } catch ( e ) {
+        return false;
+    }
+}
+
+if ( webglAvailable() ) {
+    renderer = new THREE.WebGLRenderer();
+} else {
+    renderer = new THREE.CanvasRenderer();
+}
+ 
+ // 初期化することで、ArToolkitSourceオブジェクトが描画される。
+ arToolkitSource.init(function onReady() {
+      arToolkitSource.onResize(renderer.domElement)
+ });
+
+var arToolkitContext = new THREEx.ArToolkitContext({
+     cameraParametersUrl: 'data/data/camera_para.dat',
+     detectionMode: 'mono',
+     imageSmoothingEnabled: true,
+     maxDetectionRate: 60,
+     canvasWidth: arToolkitSource.parameters.sourceWidth,
+     canvasHeight: arToolkitSource.parameters.sourceHeight,
+    })
+
+camera = new THREE.PerspectiveCamera(
+            CAMERA_PARAMETER.fovy,
+            CAMERA_PARAMETER.aspect,
+            CAMERA_PARAMETER.near,
+            CAMERA_PARAMETER.far
+        );
+
+//初期化
+ arToolkitContext.init(function onCompleted() {
+    //射影行列をコピー
+    camera.projectionMatrix.copy(arToolkitContext.getProjectionMatrix());
+});
+
+//パラメーター
+var parameters = {
+    size : 1,
+    type : 'pattern',
+    patternUrl : 'sample.pat',
+    barcodeValue : null,
+    changeMatrixMode : 'modelViewMatrix',
+}
+
+//object3Dを作成
+//このオブジェクトにマーカー上に表示するオブジェクを格納する
+var scene = new THREE.Scene();
+var markerRoot = new THREE.Group
+scene.add(markerRoot)
+
+//インスタンスを作成
+//第1引数 arToolkitContext
+//第2引数 object3D
+//第3引数 パラメーター
+var artoolkitMarker = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, parameters)
+
+var geometry = new THREE.CubeGeometry(1, 1, 1);
+var material = new THREE.MeshNormalMaterial({
+     transparent: true,
+     opacity: 0.5,
+     side: THREE.DoubleSide
+});
+
+var mesh = new THREE.Mesh(geometry, material);
+mesh.position.z = geometry.parameters.height / 2
+markerRoot.add(mesh);
+
+animate();
+
+function animate(nowMsec) {
+     requestAnimationFrame(animate);
+     arToolkitContext.update(arToolkitSource.domElement)
+}
+</script>
