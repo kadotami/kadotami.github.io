@@ -1,0 +1,100 @@
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'>
+<script defer src='https://code.getmdl.io/1.3.0/material.min.js'></script>
+
+<!-- https://davidshimjs.github.io/qrcodejs/ -->
+<script src='https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js'></script>
+	
+<body>
+	<h2>Augmented webpages<h2>
+	<h4>Adding augmented reality to webpages</h4>
+	<hr/>
+	<h5>Where you are and what gonna happen</h5>
+	This page is seen on a desktop/laptop.
+	This is a augmented reality on top of the webpage.
+	It happens as you can see on <a href='https://www.youtube.com/watch?v=EuF-k0ajsjk' target='_blank'>this video</a>.
+
+	<h5>Where you have to do now</h5>
+	<ul>
+		<li>
+			Step 1: Open the application page on your phone.
+			- <a id='arAppURLLink' href='#'>link</a>
+		</li>
+		<li>
+			Step 2: Open the marker page on your desktop/laptop. 
+			- <a href='markers-page.html'>link</a>
+		</li>
+		<li>
+			Step 3: Point your phone at the screen and enjoy :)
+		</li>
+	</ul>
+	
+
+	<hr/>
+	<hr/>
+	<hr/>
+	<hr/>
+	<h5>How to share URL between your phone and your computer</h5>
+	
+	<div id='qrCodeContainer' style='float: right'></div>
+
+	<!-- to ease copy/paste https://css-tricks.com/copy-paste-the-web/ -->
+	<input id='arAppURLView' type='text' size='80' >
+	<ul>
+		<li>you can do with with a qrcode. it is likely the easiest. see below</li>
+		<li>email it to yourself</li>
+		<li>you can do it with history sharing.</li>
+		<li>email it to yourself - <a id='emailURLtoMeLink' href='#' target='_blank'>link</a>
+		</li>
+		<li>you can copy/paste the link and handle it yourself</li>
+		<li>you can simply type it - ok i understand it isn't too pleasant</li>
+	</ul>
+	
+	
+	
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+<!-- =	SCRIPTS                                                            = -->
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+<script>
+	// goto the proper landing page depending on where you run
+	var isMobile = 'ontouchstart' in window === true ? true : false
+	// document.querySelector('#currentPlatform').innerHTML = isMobile ? 'mobile' : 'desktop'
+
+
+	// build arAppURL
+	if( location.hash.substring(1) ){
+		var arAppURL = location.hash.substring(1)
+	}else{
+		// build arAppURL
+		var arAppURL = location.protocol + '//' + location.host + location.pathname.replace(/[^\/]*$/, '') + 'examples/screenAsPortal/index.html'		
+	}
+
+	// Update arAppURL in the webpage
+	document.body.querySelector('#arAppURLView').value = arAppURL
+	document.body.querySelector('#arAppURLLink').href = arAppURL
+	
+	var mailBody = `
+	The AR.js App is at ${arAppURL}.
+	
+	Dont forget the change the reciptien email address before sending it :)
+	`
+	var mailtoUrl = 'mailto:your-goes-here-name@example.com?subject=augmented-webpages&body='+encodeURIComponent(mailBody)
+	document.body.querySelector('#emailURLtoMeLink').href = mailtoUrl
+
+	// create qrCode
+	;(function(){
+	        var container = document.createElement('div')
+	        var qrcode = new QRCode(container, {
+	                text: arAppURL,
+	                width: 256,
+	                height: 256,
+	                colorDark : '#000000',
+	                colorLight : '#ffffff',
+	        });
+	        var qrCodeImage = container.querySelector('img')
+		qrCodeImage.style.margin = '3em'
+		document.body.querySelector('#qrCodeContainer').appendChild(qrCodeImage)				
+	})()
+</script></body>
