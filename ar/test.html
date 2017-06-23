@@ -75,7 +75,15 @@ var parameters = {
 //object3Dを作成
 //このオブジェクトにマーカー上に表示するオブジェクを格納する
 var scene = new THREE.Scene();
+
+var box = new THREE.Mesh(
+    new THREE.BoxGeometry(30, 30, 30),
+    new THREE.MeshLambertMaterial({color: '#00FFFF'})
+);
+
+
 var markerRoot = new THREE.Group
+markerRoot.add(box);
 scene.add(markerRoot)
 
 //インスタンスを作成
