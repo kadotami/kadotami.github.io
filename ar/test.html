@@ -77,11 +77,11 @@
         // as we do changeMatrixMode: 'cameraTransformMatrix', start with invisible scene
         scene.visible = false
 
-        // light
-        var directionalLight = new THREE.DirectionalLight(0xFFFFCD, 0.8);　　
-        directionalLight.position.set(0, 60, 200);　　
-        var ambientLight = new THREE.AmbientLight(0xFFFFCD);　　
-        scene.add(directionalLight, ambientLight);
+        // // light
+        // var directionalLight = new THREE.DirectionalLight(0xFFFFCD, 0.8);　　
+        // directionalLight.position.set(0, 60, 200);　　
+        // var ambientLight = new THREE.AmbientLight(0xFFFFCD);　　
+        // scene.add(directionalLight, ambientLight);
 
         loader = new THREE.JSONLoader();　　
         loader.load(modelPath, function(geo, mat) {　　　
@@ -93,9 +93,9 @@
         });　　
 
         
-        onRenderFcts.push(function(delta){
-            mesh.rotation.x += Math.PI*delta
-        })
+        // onRenderFcts.push(function(delta){
+        //     mesh.rotation.x += Math.PI*delta
+        // })
 
 
         onRenderFcts.push(function(){
