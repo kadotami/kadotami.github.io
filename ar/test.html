@@ -92,9 +92,9 @@
         //     obj.add(objmodel);
 
         //     scene.add(obj);                     // sceneに追加
-        // }, onProgress, onError);
+        // });
 
-        var model_path = "model/coffee.json"
+        var model_path = "model/soccerball.json"
         loader = new THREE.JSONLoader();　　
         loader.load(model_path, function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);　　　
