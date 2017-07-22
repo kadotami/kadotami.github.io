@@ -6,7 +6,7 @@ category_models = {
         guiter.load("model/music/guitar.json", function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
-            model.position.set(-0.5, 0, -0.1);
+            model.position.set(0, 0, 0);
             model.rotation.set(0, 0, Math.PI*7/4);
             model.scale.set(0.3, 0.3, 0.3);
             scene.add(model);　　　
@@ -23,7 +23,7 @@ category_models = {
         text.load("model/music/text.json", function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
-            model.position.set(0, 0, 0.8);
+            model.position.set(0, 0, 0);
             model.scale.set(0.3, 0.3, 0.3);
             scene.add(model);　　　
         });
@@ -35,7 +35,7 @@ category_models = {
 
     "sports_model": function(scene) {
         var soccer = new THREE.JSONLoader();　　
-        soccer.load("model/soccerball.json", function(geo, mat) {　　　
+        soccer.load("model/sports/soccerball.json", function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
             model.position.set(-0.2, 0, 0);　　　
@@ -43,7 +43,7 @@ category_models = {
             scene.add(model);　　　
         });
         var baseball = new THREE.JSONLoader();　　
-        baseball.load("model/baseball.json", function(geo, mat) {　　　
+        baseball.load("model/sports/baseball.json", function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
             model.position.set(0., 0, 0);　　　
