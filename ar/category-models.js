@@ -19,14 +19,14 @@ category_models = {
             model.scale.set(0.3, 0.3, 0.3);　　　
             scene.add(model);　　　
         });
-        var drums = new THREE.JSONLoader();　　
-        drums.load("model/drums.json", function(geo, mat) {　　　
-            var faceMat = new THREE.MeshFaceMaterial(mat);
-            var model = new THREE.Mesh(geo, faceMat);
-            model.position.set(0.3, 0, -0.2);　　　
-            model.scale.set(0.3, 0.3, 0.3);　　　
-            scene.add(model);　　　
+        var TextGeometry = new THREE.TextGeometry( 'MUSIC!!!', {
+                size: 30, height: 4, curveSegments: 3,
+                font: "helvetiker", weight: "bold", style: "normal",
+                bevelThickness: 1, bevelSize: 2, bevelEnabled: true
         });
+        var Material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
+        var Text = new THREE.Mesh( TextGeometry, Material );
+        scene.add( Text );
     },
 
     "gourmet_model": function(scene) {
