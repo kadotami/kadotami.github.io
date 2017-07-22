@@ -25,8 +25,10 @@ category_models = {
                 bevelThickness: 1, bevelSize: 2, bevelEnabled: true
         });
         var Material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
-        var Text = new THREE.Mesh( TextGeometry, Material );
-        scene.add( Text );
+        var model = new THREE.Mesh( TextGeometry, Material );
+        model.position.set(0, 0, 0);　　　
+        model.scale.set(0.3, 0.3, 0.3);
+        scene.add(model);
     },
 
     "gourmet_model": function(scene) {
