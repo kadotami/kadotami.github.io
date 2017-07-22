@@ -19,16 +19,21 @@ category_models = {
             model.scale.set(0.3, 0.3, 0.3);　　　
             scene.add(model);　　　
         });
-        var TextGeometry = new THREE.TextGeometry( 'MUSIC!!!', {
-                size: 30, height: 4, curveSegments: 3,
-                font: "helvetiker", weight: "bold", style: "normal",
-                bevelThickness: 1, bevelSize: 2, bevelEnabled: true
-        });
-        var Material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
-        var model = new THREE.Mesh( TextGeometry, Material );
-        model.position.set(0, 0, 0);　　　
-        model.scale.set(0.3, 0.3, 0.3);
-        scene.add(model);
+        var loader = new THREE.FontLoader();
+        loader.load( 'fonts/helvetiker_bold.typeface.js', function ( font ) {
+            var textGeometry = new THREE.TextGeometry( 'MUSIC', {
+                font: font,
+                size: 10.0,
+                height: 5,
+                curveSegments: 10,
+                bevelThickness: 3,
+                bevelSize: 1.0,
+                bevelEnabled: true
+            });
+            var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );    
+            var text = new THREE.Mesh( textGeometry, material );    
+            scene.add( text );
+        })
     },
 
     "gourmet_model": function(scene) {
