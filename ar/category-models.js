@@ -20,7 +20,7 @@ category_models = {
             scene.add(model);　　　
         });
         var loader = new THREE.FontLoader();
-        loader.load( 'fonts/helvetiker_bold.typeface.js', function ( font ) {
+        loader.load( 'fonts/helvetiker_bold.typeface.json', function (font) {
             var textGeometry = new THREE.TextGeometry( 'MUSIC', {
                 font: font,
                 size: 10.0,
