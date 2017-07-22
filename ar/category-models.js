@@ -6,17 +6,17 @@ category_models = {
         guiter.load("model/guitar.json", function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
-            model.position.set(-0.3, 0, -0.2);　　
-            model.rotation.set(0, 0, Math.PI*7/4);　
-            model.scale.set(0.3, 0.3, 0.3);　　　
+            model.position.set(-0.3, 0, -0.2);
+            model.rotation.set(0, 0, Math.PI*7/4);
+            model.scale.set(0.3, 0.3, 0.3);
             scene.add(model);　　　
         });
         var piano = new THREE.JSONLoader();　　
         piano.load("model/piano.json", function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
-            model.position.set(0, 0, 0);　　　
-            model.scale.set(0.3, 0.3, 0.3);　　　
+            model.position.set(0, 0, 0);
+            model.scale.set(0.3, 0.3, 0.3);
             scene.add(model);　　　
         });
         var loader = new THREE.FontLoader();
@@ -31,7 +31,9 @@ category_models = {
                 bevelEnabled: true
             });
             var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );    
-            var text = new THREE.Mesh( textGeometry, material );    
+            var text = new THREE.Mesh(textGeometry, material);
+            model.position.set(0, 0, 0);
+            model.scale.set(0.3, 0.3, 0.3);  
             scene.add( text );
         })
     },
