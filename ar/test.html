@@ -81,27 +81,28 @@
         var ambientLight = new THREE.AmbientLight(0xFFFFCD);　　
         scene.add(directionalLight, ambientLight);
 
-        var model_path = "model/fluzeug"
-        var ObjLoader = new THREE.OBJMTLLoader(); 
-        ObjLoader.load(model_path+".obj", model_path+".mtl",  function (object){
-            objmodel = object.clone();
-            objmodel.scale.set(10, 10, 10);            // 縮尺の初期化
-            objmodel.rotation.set(0, 0, 0);         // 角度の初期化
-            objmodel.position.set(0, 0, 0);         // 位置の初期化
-            obj = new THREE.Object3D();
-            obj.add(objmodel);
+        // var model_path = "model/fluzeug"
+        // var ObjLoader = new THREE.OBJMTLLoader();
+        // ObjLoader.load(model_path+".obj", model_path+".mtl",  function (object){
+        //     objmodel = object.clone();
+        //     objmodel.scale.set(10, 10, 10);            // 縮尺の初期化
+        //     objmodel.rotation.set(0, 0, 0);         // 角度の初期化
+        //     objmodel.position.set(0, 0, 0);         // 位置の初期化
+        //     obj = new THREE.Object3D();
+        //     obj.add(objmodel);
 
-            scene.add(obj);                     // sceneに追加
-        }, onProgress, onError);
+        //     scene.add(obj);                     // sceneに追加
+        // }, onProgress, onError);
 
-        // loader = new THREE.JSONLoader();　　
-        // loader.load(modelPath, function(geo, mat) {　　　
-        //     var faceMat = new THREE.MeshFaceMaterial(mat);　　　
-        //     var model = new THREE.Mesh(geo, faceMat);　　　
-        //     model.position.set(0, 0, 0);　　　
-        //     model.scale.set(0.5, 0.5, 0.5);　　　
-        //     scene.add(model);　　　
-        // });　　
+        var model_path = "model/test.json"
+        loader = new THREE.JSONLoader();　　
+        loader.load(modelPath, function(geo, mat) {　　　
+            var faceMat = new THREE.MeshFaceMaterial(mat);　　　
+            var model = new THREE.Mesh(geo, faceMat);　　　
+            model.position.set(0, 0, 0);　　　
+            model.scale.set(0.5, 0.5, 0.5);　　　
+            scene.add(model);　　　
+        });　　
 
         
         // onRenderFcts.push(function(delta){
