@@ -22,5 +22,13 @@ category_models = {
     },
 
     "gourmet_model": function(scene) {
+        var coffee = new THREE.JSONLoader();　　
+        coffee.load("model/coffee.json", function(geo, mat) {　　　
+            var faceMat = new THREE.MeshFaceMaterial(mat);
+            var model = new THREE.Mesh(geo, faceMat);
+            model.position.set(0, 0, 0);　　　
+            model.scale.set(0.3, 0.3, 0.3);　　　
+            scene.add(model);　　　
+        });
     }
 }
