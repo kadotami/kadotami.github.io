@@ -7,6 +7,18 @@
 </head>
 <body>
 <script>
+    var add_model = function(scene) {
+        var model_path = "model/soccerball.json"
+        loader = new THREE.JSONLoader();　　
+        loader.load(model_path, function(geo, mat) {　　　
+            var faceMat = new THREE.MeshFaceMaterial(mat);　　　
+            var model = new THREE.Mesh(geo, faceMat);　　　
+            model.position.set(0, 0, 0);　　　
+            model.scale.set(0.5, 0.5, 0.5);　　　
+            scene.add(model);　　　
+        });　　
+    }
+
     var prepare_ar = function(hobby_type) { 
         var renderer	= new THREE.WebGLRenderer({
             antialias: true,
@@ -22,19 +34,14 @@
 
         var onRenderFcts= [];
         var scene	= new THREE.Scene();
-
         var camera = new THREE.Camera();
         scene.add(camera);
-
         var arToolkitSource = new THREEx.ArToolkitSource({
             sourceType : 'webcam'
         })
-
         arToolkitSource.init(function onReady(){
             onResize()
         })
-        
-        // handle resize
         window.addEventListener('resize', function(){
             onResize()
         })
@@ -53,17 +60,13 @@
         })
         // initialize it
         arToolkitContext.init(function onCompleted(){
-            // copy projection matrix to camera
             camera.projectionMatrix.copy( arToolkitContext.getProjectionMatrix() );
         })
 
         // update artoolkit on every frame
         onRenderFcts.push(function(){
             if( arToolkitSource.ready === false )	return
-
-            arToolkitContext.update( arToolkitSource.domElement )
-            
-            // update scene.visible if the marker is seen
+            arToolkitContext.update( arToolkitSource.domElement )            
             scene.visible = camera.visible
         })
 
@@ -72,10 +75,9 @@
             patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
             changeMatrixMode: 'cameraTransformMatrix'
         })
-        // as we do changeMatrixMode: 'cameraTransformMatrix', start with invisible scene
         scene.visible = false
 
-        // light
+        // lightの設定
         var directionalLight = new THREE.DirectionalLight(0xFFFFCD, 0.8);　　
         directionalLight.position.set(0, 60, 200);　　
         var ambientLight = new THREE.AmbientLight(0xFFFFCD);　　
@@ -94,16 +96,7 @@
         //     scene.add(obj);                     // sceneに追加
         // });
 
-        var model_path = "model/soccerball.json"
-        loader = new THREE.JSONLoader();　　
-        loader.load(model_path, function(geo, mat) {　　　
-            var faceMat = new THREE.MeshFaceMaterial(mat);　　　
-            var model = new THREE.Mesh(geo, faceMat);　　　
-            model.position.set(0, 0, 0);　　　
-            model.scale.set(0.5, 0.5, 0.5);　　　
-            scene.add(model);　　　
-        });　　
-
+        add_model(scene);
         
         // onRenderFcts.push(function(delta){
         //     mesh.rotation.x += Math.PI*delta
