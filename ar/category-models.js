@@ -21,7 +21,7 @@ category_models = {
         });
         var loader = new THREE.FontLoader();
         loader.load( 'fonts/helvetiker_bold.typeface.json', function (font) {
-            var textGeometry = new THREE.TextGeometry( 'MUSIC', {
+            var textGeometry = new THREE.TextGeometry( 'MY HOBBY IS MUSIC!!!', {
                 font: font,
                 size: 10.0,
                 height: 5,
@@ -33,7 +33,7 @@ category_models = {
             var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );    
             var text = new THREE.Mesh(textGeometry, material);
             model.position.set(0, 0, 0);
-            model.scale.set(0.3, 0.3, 0.3);  
+            model.scale.set(1, 1, 1);  
             scene.add( text );
         })
     },
