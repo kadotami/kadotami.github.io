@@ -23,7 +23,7 @@ category_models = {
         text.load("model/music/text.json", function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
-            model.position.set(0, 0, 0.2);
+            model.position.set(0, 0, 0.8);
             model.scale.set(0.3, 0.3, 0.3);
             scene.add(model);　　　
         });
