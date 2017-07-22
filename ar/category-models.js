@@ -8,7 +8,7 @@ category_models = {
             var model = new THREE.Mesh(geo, faceMat);
             model.position.set(0.3, 0.3, -0.2);　　
             model.rotation.set(0, 0, Math.PI*7/4);　
-            model.scale.set(0.5, 0.5, 0.5);　　　
+            model.scale.set(0.3, 0.3, 0.3);　　　
             scene.add(model);　　　
         });
         var piano = new THREE.JSONLoader();　　
@@ -16,7 +16,7 @@ category_models = {
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
             model.position.set(0, 0, 0);　　　
-            model.scale.set(0.5, 0.5, 0.5);　　　
+            model.scale.set(0.3, 0.3, 0.3);　　　
             scene.add(model);　　　
         });
     },
