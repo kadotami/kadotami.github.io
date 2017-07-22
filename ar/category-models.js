@@ -19,11 +19,34 @@ category_models = {
             model.scale.set(0.3, 0.3, 0.3);　　　
             scene.add(model);　　　
         });
+        var drums = new THREE.JSONLoader();　　
+        drums.load("model/drums.json", function(geo, mat) {　　　
+            var faceMat = new THREE.MeshFaceMaterial(mat);
+            var model = new THREE.Mesh(geo, faceMat);
+            model.position.set(0.3, 0, -0.2);　　　
+            model.scale.set(0.3, 0.3, 0.3);　　　
+            scene.add(model);　　　
+        });
     },
 
     "gourmet_model": function(scene) {
-        var coffee = new THREE.JSONLoader();　　
-        coffee.load("model/coffee.json", function(geo, mat) {　　　
+       
+    },
+
+    "sports_model": function(scene) {
+        var soccer = new THREE.JSONLoader();　　
+        soccer.load("model/soccerball.json", function(geo, mat) {　　　
+            var faceMat = new THREE.MeshFaceMaterial(mat);
+            var model = new THREE.Mesh(geo, faceMat);
+            model.position.set(0, 0, 0);　　　
+            model.scale.set(0.3, 0.3, 0.3);　　　
+            scene.add(model);　　　
+        });
+    },
+
+    "game_model": function(scene) {
+        var game = new THREE.JSONLoader();　　
+        game.load("model/game.json", function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
             model.position.set(0, 0, 0);　　　
