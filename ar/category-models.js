@@ -44,7 +44,7 @@ category_models = {
 
     "game_model": function(scene) {
         var game = new THREE.JSONLoader();　　
-        game.load("model/game/ps4.json", function(geo, mat) {　　　
+        game.load("model/game/game.json", function(geo, mat) {　　　
             var faceMat = new THREE.MeshFaceMaterial(mat);
             var model = new THREE.Mesh(geo, faceMat);
             model.position.set(0, 0, 0);　　　
