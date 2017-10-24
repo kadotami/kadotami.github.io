@@ -8712,7 +8712,8 @@ h1, h2, h3, h4, h5, h6 {
         transform: rotate(-4deg); } }
 
 .profile__item {
-  margin: 48px 0; }
+  margin: 48px 0;
+  text-align: center; }
   .profile__item h3 {
     font-size: 24px; }
   .profile__item h4 {
@@ -8729,15 +8730,15 @@ h1, h2, h3, h4, h5, h6 {
 .skill__stararea {
   width: 100px;
   margin: 24px auto 0; }
-.skill__star, .skill__star--gray {
+.skill__star {
   margin-top: -30px;
   color: #FFFD40;
   white-space: nowrap;
   overflow-x: hidden;
   letter-spacing: 0; }
-  .skill__star i, .skill__star--gray i {
+  .skill__star i {
     font-size: 20px; }
-    .skill__star i:before, .skill__star--gray i:before {
+    .skill__star i:before {
       text-align: center; }
 .skill__star--gray {
   text-shadow: 0 1px 1px #000;
@@ -8748,6 +8749,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 96px;
   margin: 0 auto;
   font-size: 96px; }
+  @media only screen and (max-width: 600px) {
+    .skill__icon {
+      width: 48px; } }
 .skill__otherItem {
   text-align: center; }
 .skill__otherIcon {
@@ -8813,6 +8817,10 @@ h1, h2, h3, h4, h5, h6 {
 .header h1 {
   text-align: center;
   font-size: 48px; }
+  @media only screen and (max-width: 600px) {
+    .header h1 {
+      margin: 12px 0;
+      font-size: 24px; } }
 
 .footer {
   text-align: center;

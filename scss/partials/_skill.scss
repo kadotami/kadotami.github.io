@@ -28,8 +28,9 @@
     }
 
     &__star--gray {
-        text-shadow: 0 1px 1px #000;
-        color: #6A6A6A;
+
+      text-shadow: 0 1px 1px #000;
+      color: #6A6A6A;
     }
 
     &__name {
@@ -40,6 +41,9 @@
         width: 96px;
         margin: 0 auto;
         font-size: 96px;
+        @media #{$small-and-down} {
+          width: 48px;
+        }
     }
 
     &__otherItem {
