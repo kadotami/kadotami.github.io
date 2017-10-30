@@ -8713,7 +8713,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile__item {
   margin: 48px 0;
-  text-align: center; }
+  text-align: left; }
   .profile__item h3 {
     font-size: 24px; }
   .profile__item h4 {
