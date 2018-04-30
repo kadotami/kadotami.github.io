@@ -6,6 +6,7 @@ var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
 	'/pwa/',
 	'/pwa/css/style.css',
+	'/pwa/node_modules/web-animations-js/web-animations.min.js'
 ];
 
 // インストール処理
