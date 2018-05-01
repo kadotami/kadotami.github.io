@@ -1,0 +1,30 @@
+$values: '東京', '神奈川', '山梨', '埼玉', '群馬', '栃木', '千葉', '茨城', '静岡', '福島';
+
+.roulette__body {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	border: solid 1px;
+	overflow: hidden;
+}
+
+.roulette__body li {
+	position: absolute;
+	width: 100px;
+	height: 300px;
+	margin: 0 auto;
+	border: solid 1px;
+	background: #888;
+	transform-origin: 50px 150px;
+	@each $value in $values {
+		$key: index($values, $value);
+		&:nth-child(#{$key}) {
+			transform: rotate($key * 36deg);
+			z-index: $key;
+			&:before{
+				content: '#{nth($values, $key)}';
+			}
+		}
+	}
+}

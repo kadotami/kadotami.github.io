@@ -5,6 +5,7 @@
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
 	'/pwa/',
+	'/pwa/index.html',
 	'/pwa/css/style.css',
 	'/pwa/node_modules/web-animations-js/web-animations.min.js'
 ];

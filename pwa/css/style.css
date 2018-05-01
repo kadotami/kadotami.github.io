@@ -1,7 +1,69 @@
-* {
-	width: 100%;
-	height: 100%;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-}
+@charset "UTF-8";
+.roulette__body {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 1px;
+  overflow: hidden; }
+
+.roulette__body li {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  margin: 0 auto;
+  border: solid 1px;
+  background: #888;
+  transform-origin: 50px 150px; }
+  .roulette__body li:nth-child(1) {
+    transform: rotate(36deg);
+    z-index: 1; }
+    .roulette__body li:nth-child(1):before {
+      content: "東京"; }
+  .roulette__body li:nth-child(2) {
+    transform: rotate(72deg);
+    z-index: 2; }
+    .roulette__body li:nth-child(2):before {
+      content: "神奈川"; }
+  .roulette__body li:nth-child(3) {
+    transform: rotate(108deg);
+    z-index: 3; }
+    .roulette__body li:nth-child(3):before {
+      content: "山梨"; }
+  .roulette__body li:nth-child(4) {
+    transform: rotate(144deg);
+    z-index: 4; }
+    .roulette__body li:nth-child(4):before {
+      content: "埼玉"; }
+  .roulette__body li:nth-child(5) {
+    transform: rotate(180deg);
+    z-index: 5; }
+    .roulette__body li:nth-child(5):before {
+      content: "群馬"; }
+  .roulette__body li:nth-child(6) {
+    transform: rotate(216deg);
+    z-index: 6; }
+    .roulette__body li:nth-child(6):before {
+      content: "栃木"; }
+  .roulette__body li:nth-child(7) {
+    transform: rotate(252deg);
+    z-index: 7; }
+    .roulette__body li:nth-child(7):before {
+      content: "千葉"; }
+  .roulette__body li:nth-child(8) {
+    transform: rotate(288deg);
+    z-index: 8; }
+    .roulette__body li:nth-child(8):before {
+      content: "茨城"; }
+  .roulette__body li:nth-child(9) {
+    transform: rotate(324deg);
+    z-index: 9; }
+    .roulette__body li:nth-child(9):before {
+      content: "静岡"; }
+  .roulette__body li:nth-child(10) {
+    transform: rotate(360deg);
+    z-index: 10; }
+    .roulette__body li:nth-child(10):before {
+      content: "福島"; }
+
+/*# sourceMappingURL=style.css.map */

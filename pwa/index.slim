@@ -1,0 +1,33 @@
+html
+  head
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta charset="utf-8" /
+    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /
+    title PWA Sample
+    link rel="manifest" href="manifest.json" /
+    link href="css/style.css" rel="stylesheet" /
+  body
+    .roulette 
+      .roulette__body
+        - (1..10).each do |place|
+          li
+
+    script src="node_modules/web-animations-js/web-animations.min.js"
+    javascript:
+      var elem = document.querySelector('.pulse');
+      var animation = elem.animate({
+          opacity: [0.5, 1],
+          transform: ['scale(0.5)', 'scale(1)'],
+      }, {
+            direction: 'alternate',
+            duration: 500,
+            iterations: Infinity,
+      });
+
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function(err) {
+           console.log('ServiceWorker registration failed: ', err);
+        });
+      }
