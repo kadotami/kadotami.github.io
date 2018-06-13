@@ -1,12 +1,20 @@
 .profile {
     &__item {
-        margin: 48px 0;
-        text-align: left;
+        width: 60%;
+        margin: 48px 20%;
+        @media #{$medium-and-down} {
+            width: 80%;
+            margin: 48px 10%;
+        }
+
         h3 {
             font-size: 24px;
+            text-align: center;
         }
         h4 {
             font-size: 20px;
+            text-align: center;
+            margin-bottom: 16px;
         }
         &--list {
 
@@ -14,5 +22,12 @@
     }
     &__detail {
         margin-bottom: 16px;
+        &--prize {
+            text-align: center;
+            margin: 16px 0;
+            h4 {
+                margin: 0;
+            }
+        }
     }
 }

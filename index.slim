@@ -40,26 +40,26 @@ html
         .profile__item
           h3 インターン経験
           li.profile__item--list 
-            | RECRUIT
+            | RECRUIT: 1チーム3人での目覚ましアプリの開発コンテスト
           li.profile__item--list 
-            | Yahoo! Japan
+            | Yahoo! Japan: 
           li.profile__item--list 
-            | NAVITIME
+            | NAVITIME: 
           li.profile__item--list 
-            | GMO internet joint lab
+            | GMO internet joint lab: 
         
         .profile__item
           h3 コンテスト受賞歴
-          .profile__detail
+          .profile__detail--prize
             h4 hack U waseda
             p  RealSakaiLab「ピクタム」Yahoo賞
-          .profile__detail
+          .profile__detail--prize
             h4 早稲田大学ビジネスコンテスト 2013
             p wizpra 「Pozica」 最優秀賞
-          .profile__detail
+          .profile__detail--prize
             h4 第10回 キャンパスベンチャーグランプリ
             p wizpra 「Pozica」 関東経済産業局長賞
-          .profile__detail
+          .profile__detail--prize
             h4 Battle Conference Under 30 2018
             p クライアント部門 ベストトーク賞
 
@@ -68,7 +68,7 @@ html
       section.skill.block
         h2 Skils
         .row
-          - icons = [["css3",90,"CSS"],["html5",90,"HTML5"],["php",50,"PHP"],["python",70,"Python"],["angular", 70, "AngularJS 1.*"],["wordpress",50,"Wordpress"],["yii",60,"Yii2"],["ruby_on_rails",70,"Rails"]]
+          - icons = [["css3",90,"CSS"],["html5",90,"HTML5"],["php",70,"PHP"],["python",70,"Python"],["docker", 60, "Docker"],["wordpress",50,"Wordpress"],["yii",60,"Yii2"],["ruby_on_rails",70,"Rails"]]
           - icons.each do |icon, grade, display|
             .skill__item.col.l3.m3.s6
               .skill__icon.devicons class="devicons-#{icon}"
@@ -83,7 +83,7 @@ html
 
         .skill__otherItem
           h3 その他
-          - icons = ["bower","atlassian","go","ionic","yeoman","react","coffeescript"]
+          - icons = ["bower","atlassian","go","ionic","yeoman","react","angular"]
           - icons.each do |name|
             span class="skill__otherIcon devicons devicons-#{name}"
 
@@ -97,7 +97,7 @@ html
             .product__image
               img src="images/made1.png" /
           .product__item.col.s12.m6.l6
-            h3 wizpra CARD
+            h3 wizpra CARD & NPS
             .product__image
               img src="images/made2.png" /
         .row
@@ -106,7 +106,7 @@ html
             .product__image
               img src="images/made3.png" /
           .product__item.col.s12.m6.l6
-            h3 人生のメンターマッチングサービス　Galeri
+            h3 学生＆メンターマッチングサービス　Galeri
             .product__image
               img src="images/made4.png" /
       
