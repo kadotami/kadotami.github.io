@@ -33,48 +33,36 @@ html
               | インターンからアルバイトを経て新卒入社。GMOポイントのリニューアルに従事中。
               | アプリケーションレイヤーではグループ横断決済基盤の構築やフロントエンド速度改善、
               | インフラレイヤーではDocker化、Kubernetesクラスタ構築を担当。
-
-        .profile__item
-          h3 大学研究テーマ
-          p 学部: テキスト分割
-          p 院: 検索ログの分析とコンテキストによる検索結果の最適化
-
+        
         .profile__item
           h3 インターン経験
-          .profile__item--list 
-            span.company
-              | RECRUIT:　
-            span
-              | 1チーム3人での目覚ましアプリの開発コンテスト
-          .profile__item--list 
-            span.company
-              | Yahoo! Japan:　
-            span
-              | 検索ログを用いた研究
-          .profile__item--list
-            span.company 
-              | NAVITIME:　
-            span
-              | Webサイト埋め込み用の新機能開発
-          .profile__item--list
-            span.company 
-              | GMO internet joint lab:　
-            span
-              | Atlassian製品のセットアップと運用自動化
+          .profile__detail.profile__detail--center
+            h5 RECRUIT
+            p 1チーム3人での目覚ましアプリの開発コンテスト
+          .profile__detail.profile__detail--center
+            h5 Yahoo! Japan
+            p 検索ログを用いた研究
+              <a href="http://sigir.org/ictir2017/short-papers/"> (ICTIR 2017採択) </a>
+          .profile__detail.profile__detail--center
+            h5 NAVITIME
+            p Webサイト埋め込み用の新機能開発
+          .profile__detail--center
+            h5  GMO internet joint lab　
+            p Atlassian製品のセットアップと運用自動化
         
         .profile__item
           h3 コンテスト受賞歴
-          .profile__detail--prize
-            h4 hack U waseda
+          .profile__detail.profile__detail--center
+            h5 hack U waseda
             p  RealSakaiLab「ピクタム」Yahoo賞
-          .profile__detail--prize
-            h4 早稲田大学ビジネスコンテスト 2013
+          .profile__detail.profile__detail--center
+            h5 早稲田大学ビジネスコンテスト 2013
             p wizpra 「Pozica」 最優秀賞
-          .profile__detail--prize
-            h4 第10回 キャンパスベンチャーグランプリ
+          .profile__detail.profile__detail--center
+            h5 第10回 キャンパスベンチャーグランプリ
             p wizpra 「Pozica」 関東経済産業局長賞
-          .profile__detail--prize
-            h4 Battle Conference Under 30 2018
+          .profile__detail.profile__detail--center
+            h5 Battle Conference Under 30 2018
             p クライアント部門 ベストトーク賞
 
       .block__separator
@@ -123,7 +111,12 @@ html
             h3 学生＆メンターマッチングサービス　Galeri
             .product__image
               img src="images/made4.png" /
-      
+        .row
+          .product__item.col.s12.m6.l6
+            h3 趣味を可視化する名刺 ~Shumiel~
+            a.product__image href="https://recruit.gmo.jp/engineer/jisedai/blog/shumiel/" target="_blank"
+              img src="images/made5.png" /
+          
       .block__separator
 
       section.footer
